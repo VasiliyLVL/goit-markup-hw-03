@@ -6,7 +6,10 @@
     --primay-grey-color: #2F303A;
     --address-link-color: rgba(255, 255, 255, 0.6);
     --examples-button-color: #F5F4FA;
+    --border-color: #eeeeee;
 }
+
+
 
 /* Веб-сайт */
 
@@ -22,6 +25,7 @@ body {
 ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
 }
@@ -35,8 +39,35 @@ a {
 /* Акцент #2196F3 */
 /* в футере #FFFFFF 60 % */
 
+
+/* container */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-flex {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+}
+
 /* logo */
 .logo {
+    display: block;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
     color: var(--acent-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -54,7 +85,25 @@ a {
 }
 
 /* site-nav */
+.site-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+}
+
+.site-nav .item {
+    margin-right: 50px;
+}
+
+.site-nav .item:last-child {
+    margin-right: 0;
+}
+
 .site-nav .link {
+    display: block;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -72,12 +121,25 @@ a {
 }
 
 /* contacts */
+.contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
 .contacts .link {
+    display: block;
+    margin-right: 50px;
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
+
+.contacts .link:last-child {
+    margin-right: 0;
 }
 
 .contacts .link:hover,
@@ -87,7 +149,9 @@ a {
 
 /* hero */
 .hero {
+    padding: 200px 0;
     background-color: var(--primay-grey-color);
+    text-align: center;
 }
 
 .hero .title {
@@ -96,8 +160,9 @@ a {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    text-align: center;
     text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
 
 }
 
@@ -110,9 +175,18 @@ a {
     letter-spacing: 0.06em;
     text-align: center;
     cursor: pointer;
+    min-width: 200px;
+    padding: 10px 32px;
+    border: 0;
+    border-radius: 4px;
 }
 
 /* section */
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .section-title {
     color: var(--title-text-color);
@@ -121,35 +195,81 @@ a {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-title.hidden-title {
+    margin-bottom: 94px;
 }
 
 /* features */
-.features .title {
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 94px;
+    padding-left: 0;
+}
+
+.features-list .title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.features .text {
+.features-list .text {
+    max-width: 270px;
     line-height: 1.71;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.work {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 /* team */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.team .item {
+    margin-left: 30px;
+}
+
 .team .title {
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .team .text {
-font-size: 16px;
-line-height: 1.19;
-text-align: center;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* footer */
@@ -157,26 +277,71 @@ text-align: center;
     background-color: var(--primay-grey-color);
     line-height: 1.71;
     letter-spacing: 0.03em;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.address {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 .address .link {
     color: var(--address-link-color);
     font-style: normal;
+    line-height: 1.71;
 }
 
 .address .sity {
     color: var(--primary-white-color);
     font-style: normal;
+    margin-bottom: 9px;
+}
+
+.address .sity-linc {
+    margin-bottom: 9px;
+}
+
+.sity-linc:last-child {
+    margin-bottom: 0;
 }
 
 /* Портфолио */
+
+.container.cont-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .portfolio-section-title {
+    margin-top: 0;
+    margin-bottom: 94px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.description {
+    padding: 20px 24px;
+    border: 1px solid var(--border-color);
+    border-top: 0;
+}
+
+.examples-buton {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding-left: 0;
 }
 
 .examples-buton .btn {
@@ -187,16 +352,42 @@ text-align: center;
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
+    padding: 6px 22px;
 }
 
-.examples-buton .btn:hover, 
+.examples-buton .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.examples-buton .btn:hover,
 .examples-buton .btn:focus {
     background-color: var(--acent-color);
     color: var(--primary-white-color);
     cursor: pointer;
 }
 
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.examples .item {
+    margin-left: 30px;
+
+
+}
+
+.examples .item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+}
+
 .examples .title {
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -205,6 +396,8 @@ text-align: center;
 }
 
 .examples .text {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 1.88;
 }
