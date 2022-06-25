@@ -338,7 +338,7 @@ a {
     border: 1px solid var(--border-color);
     border-top: 0;
 }
-
+ /* Блок кнопок */
 .examples-buton {
     display: flex;
     justify-content: center;
