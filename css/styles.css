@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
 /* Цвет фона #ffffff */
 /* Цвет фона героя и футера #2F303A */
 /* Цвет фона "Наша команда" #F5F4FA */
